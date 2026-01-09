@@ -142,13 +142,11 @@ public:
     using LGFX_Device::println;
     using LGFX_Device::printf;
 
-    // Touchscreen compatibility - ADDED
-    bool getTouch(uint16_t *x, uint16_t *y, uint16_t threshold = 600) {
-        return LGFX_Device::getTouch((int32_t*)x, (int32_t*)y);
-    }
+    // Use getTouch, inherited directly from LGFX_Device.
 
     // Additionally
     void setBrightness(uint8_t brightness) { LGFX_Device::setBrightness(brightness); }
     int16_t width()  const { return LGFX_Device::width(); }
     int16_t height() const { return LGFX_Device::height(); }
 };
+
